@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRAFT AND BAN TOOL AQUILLA</title>
+    <title>..</title>
 </head>
 <body>
 
@@ -12,7 +12,7 @@
 
 <!-- Blue side -->
     <div class="teamnameblue">
-        <div class="team-name-display" id="teamNameDisplay1">Blue Side</div>
+        <div class="team-name-display" id="teamNameDisplay1">aquilla</div>
         
 
     </div>
@@ -72,7 +72,7 @@
 
 <!-- Red side Name-->
     <div class="teamnamered">
-        <div class="team-name-display" id="teamNameDisplay2">Red Side</div>
+        <div class="team-name-display" id="teamNameDisplay2">excellentia</div>
 
     </div>
 
@@ -415,7 +415,6 @@
 
     <button class="controlbutton" onclick="resetInputs()">Reset Nick</button>
     <button class="controlbutton" onclick="resetPlayerPhotos()">Reset Photos</button>
-    <button class="controlbutton" onclick="switchInputs()">Switch Nickname</button>
 
         <!-- Tombol untuk reset dan switch all -->
     
@@ -424,7 +423,7 @@
     <button class="controlbutton" onclick="resetContent()">Reset</button>
     
   <!-- Input Box -->
-  <input type="text" id="tournamentnamemid" class="tournamentnamebox" placeholder="Match">
+  <input type="text" id="tournamentnamemid" class="tournamentnamebox" placeholder="Match _ - Game _" oninput="updateTournamentName()">
   
   <!-- Output Box -->
 
@@ -438,21 +437,18 @@
 <div  class="allcontrol">
     <div class="bluesidecontrol">
         <h2>Nickname</h2>
+        <label>Team photo folder:</label>
+        <input type="file" id="teamFolderBlue" webkitdirectory multiple onchange="loadTeamPhotos(event, 'blue')"><br>
         <label for="input1">1</label>
-        <input type="text" id="input1" oninput="updateOutput()">
-        <input type="file" accept="image/*" id="playerPhoto1" onchange="loadPlayerPhoto(event, 1)"><br>
+        <input type="text" id="input1" oninput="updateOutput()"><br>
         <label for="input2">2</label>
-        <input type="text" id="input2" oninput="updateOutput()">
-        <input type="file" accept="image/*" id="playerPhoto2" onchange="loadPlayerPhoto(event, 2)"><br>
+        <input type="text" id="input2" oninput="updateOutput()"><br>
         <label for="input3">3</label>
-        <input type="text" id="input3" oninput="updateOutput()">
-        <input type="file" accept="image/*" id="playerPhoto3" onchange="loadPlayerPhoto(event, 3)"><br>
+        <input type="text" id="input3" oninput="updateOutput()"><br>
         <label for="input4">4</label>
-        <input type="text" id="input4" oninput="updateOutput()">
-        <input type="file" accept="image/*" id="playerPhoto4" onchange="loadPlayerPhoto(event, 4)"><br>
+        <input type="text" id="input4" oninput="updateOutput()"><br>
         <label for="input5">5</label>
-        <input type="text" id="input5" oninput="updateOutput()">
-        <input type="file" accept="image/*" id="playerPhoto5" onchange="loadPlayerPhoto(event, 5)"><br>
+        <input type="text" id="input5" oninput="updateOutput()"><br>
     </div>
 
     <div class="bluesidepick">
@@ -522,21 +518,18 @@
 <!-- Input untuk 6-10 -->
     <div class="redsidecontrol">
         <h2>Nickname</h2>
+        <label>Team photo folder:</label>
+        <input type="file" id="teamFolderRed" webkitdirectory multiple onchange="loadTeamPhotos(event, 'red')"><br>
         <label for="input6">1</label>
-        <input type="text" id="input6" oninput="updateOutput()">
-        <input type="file" accept="image/*" id="playerPhoto6" onchange="loadPlayerPhoto(event, 6)"><br>
+        <input type="text" id="input6" oninput="updateOutput()"><br>
         <label for="input7">2</label>
-        <input type="text" id="input7" oninput="updateOutput()">
-        <input type="file" accept="image/*" id="playerPhoto7" onchange="loadPlayerPhoto(event, 7)"><br>
+        <input type="text" id="input7" oninput="updateOutput()"><br>
         <label for="input8">3</label>
-        <input type="text" id="input8" oninput="updateOutput()">
-        <input type="file" accept="image/*" id="playerPhoto8" onchange="loadPlayerPhoto(event, 8)"><br>
+        <input type="text" id="input8" oninput="updateOutput()"><br>
         <label for="input9">4</label>
-        <input type="text" id="input9" oninput="updateOutput()">
-        <input type="file" accept="image/*" id="playerPhoto9" onchange="loadPlayerPhoto(event, 9)"><br>
+        <input type="text" id="input9" oninput="updateOutput()"><br>
         <label for="input10">5</label>
-        <input type="text" id="input10" oninput="updateOutput()">
-        <input type="file" accept="image/*" id="playerPhoto10" onchange="loadPlayerPhoto(event, 10)"><br>
+        <input type="text" id="input10" oninput="updateOutput()"><br>
     </div>
 
     <div class="redesidepick">

@@ -198,19 +198,36 @@ function selectHero(hero, id) {
     }
 }
 
-// Fungsi untuk memuat foto pemain ke dalam kartu pick (sisi depan, sebelum hero dipilih)
-function loadPlayerPhoto(event, playerIndex) {
-    const file = event.target.files[0];
-    if (!file) return;
+// Fungsi untuk memuat foto satu tim sekaligus dari folder (5 slot per tim)
+// Nama pemain otomatis diisi dari nama file gambar (tanpa ekstensi)
+function loadTeamPhotos(event, team) {
+    const files = Array.from(event.target.files).filter(f => f.type.startsWith('image/'));
 
-    const reader = new FileReader();
-    reader.onload = function (e) {
-        const photoDiv = document.getElementById(`player-photo-${playerIndex}`);
-        if (!photoDiv) return;
-        photoDiv.style.backgroundImage = `url(${e.target.result})`;
-        photoDiv.classList.add('has-photo');
-    };
-    reader.readAsDataURL(file);
+    // Urutkan berdasarkan nama file (numeric-aware) agar 1,2,...,10 tersusun benar
+    files.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+
+    const startIndex = team === 'blue' ? 1 : 6;
+
+    files.slice(0, 5).forEach((file, i) => {
+        const playerIndex = startIndex + i;
+
+        // Ambil nama pemain dari nama file (buang ekstensi & angka urutan di depan, jika ada)
+        const baseName = file.name.replace(/\.[^/.]+$/, '');
+        const nickname = baseName.replace(/^\d+[\s_-]*/, '');
+        const nicknameInput = document.getElementById(`input${playerIndex}`);
+        if (nicknameInput) nicknameInput.value = nickname;
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const photoDiv = document.getElementById(`player-photo-${playerIndex}`);
+            if (!photoDiv) return;
+            photoDiv.style.backgroundImage = `url(${e.target.result})`;
+            photoDiv.classList.add('has-photo');
+        };
+        reader.readAsDataURL(file);
+    });
+
+    updateOutput(); // refresh the nameholders under the pick cards
 }
 
 // Fungsi untuk mereset semua foto pemain ke kondisi kosong (No Photo)
@@ -221,9 +238,11 @@ function resetPlayerPhotos() {
             photoDiv.style.backgroundImage = '';
             photoDiv.classList.remove('has-photo');
         }
-        const fileInput = document.getElementById(`playerPhoto${i}`);
-        if (fileInput) fileInput.value = '';
     }
+    const blueFolder = document.getElementById('teamFolderBlue');
+    const redFolder = document.getElementById('teamFolderRed');
+    if (blueFolder) blueFolder.value = '';
+    if (redFolder) redFolder.value = '';
 }
 
 // Fungsi untuk meng-update gambar hero dengan animasi fly-in
@@ -367,6 +386,13 @@ function switchAll() {
     team2.value = tempName;
     updateTeamName();
 
+    const barLabel1 = document.getElementById('barLabel1');
+    const barLabel2 = document.getElementById('barLabel2');
+    const tempLabel = barLabel1.value;
+    barLabel1.value = barLabel2.value;
+    barLabel2.value = tempLabel;
+    updateBarLabel();
+
     // Tukar gambar utama
     const img1 = document.getElementById('image1');
     const img2 = document.getElementById('image2');
@@ -381,25 +407,40 @@ function switchAll() {
         const extraImageA = document.getElementById('extraImage' + i);
         const extraImageB = document.getElementById('extraImage' + (i + 3));
 
-        // Tukar status checkbox
         const tempChecked = checkboxA.checked;
         checkboxA.checked = checkboxB.checked;
         checkboxB.checked = tempChecked;
 
-        // Tukar tampilan gambar berdasarkan checkbox
         extraImageA.style.display = checkboxA.checked ? "block" : "none";
         extraImageB.style.display = checkboxB.checked ? "block" : "none";
     }
+
+    // Tukar nickname (dulu tombol terpisah "Switch Nickname")
+    switchInputs();
+
+    // Tukar foto pemain
+    for (let i = 1; i <= 5; i++) {
+        const photoA = document.getElementById('player-photo-' + i);
+        const photoB = document.getElementById('player-photo-' + (i + 5));
+
+        const tempBg = photoA.style.backgroundImage;
+        const tempHasPhoto = photoA.classList.contains('has-photo');
+
+        photoA.style.backgroundImage = photoB.style.backgroundImage;
+        photoA.classList.toggle('has-photo', photoB.classList.contains('has-photo'));
+
+        photoB.style.backgroundImage = tempBg;
+        photoB.classList.toggle('has-photo', tempHasPhoto);
+    }
 }
 
-    // Ambil elemen input dan output
-    const tournamentnameInput = document.getElementById('tournamentnamemid');
-    const tournamentnameOutput = document.getElementById('tournamentnameOutput');
+// Ambil elemen input dan output
+const tournamentnameInput = document.getElementById('tournamentnamemid');
+const tournamentnameOutput = document.getElementById('tournamentnameOutput');
 
-    // Fungsi untuk menampilkan teks yang sama di output saat user mengetik
-    tournamentnameInput.addEventListener('input', function() {
-      tournamentnameOutput.textContent = tournamentnameInput.value;
-    });
+tournamentnameInput.addEventListener('input', function() {
+  tournamentnameOutput.textContent = tournamentnameInput.value;
+});
 
 //timer
 
@@ -562,7 +603,12 @@ function moveNickname(from, to) {
 
     updateOutput();   // refreshes the names under the pick cards
 }
-
-
+function resetEverything() {
+    reset();
+    resetContent();
+    resetInputs();
+    resetTimer();
+    resetPhase();
+}
 // Populate the hero grid immediately, without waiting for a slot to be clicked
 renderHeroPicker();

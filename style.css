@@ -355,8 +355,8 @@ button:hover {
     text-align: center;
 }
 
-.player-photo.has-photo {
-    background-color: #2a2a30;
+.player-photo.has-photo::before {
+    content: "";
 }
 
 .pick1::before {
