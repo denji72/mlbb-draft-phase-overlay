@@ -1,135 +1,137 @@
 const heroes = [
-    { name: 'Aamon', img: 'Assets/HeroPick/aamon.png', roles: ['Assassin'] },
-    { name: 'Akai', img: 'Assets/HeroPick/akai.png', roles: ['Tank'] },
-    { name: 'Aldous', img: 'Assets/HeroPick/aldous.png', roles: ['Fighter'] },
-    { name: 'Alice', img: 'Assets/HeroPick/alice.png', roles: ['Mage'] },
-    { name: 'Alpha', img: 'Assets/HeroPick/alpha.png', roles: ['Fighter'] },
-    { name: 'Alucard', img: 'Assets/HeroPick/alucard.png', roles: ['Assassin'] },
-    { name: 'Angela', img: 'Assets/HeroPick/angela.png', roles: ['Support'] },
-    { name: 'Argus', img: 'Assets/HeroPick/argus.png', roles: ['Fighter'] },
-    { name: 'Arlott', img: 'Assets/HeroPick/arlot.png', roles: ['Assassin', 'Fighter'] },
-    { name: 'Atlas', img: 'Assets/HeroPick/atlas.png', roles: ['Tank'] },
-    { name: 'Aulus', img: 'Assets/HeroPick/aulus.png', roles: ['Fighter'] },
-    { name: 'Aurora', img: 'Assets/HeroPick/aurora.png', roles: ['Mage'] },
-    { name: 'Badang', img: 'Assets/HeroPick/badang.png', roles: ['Fighter'] },
-    { name: 'Balmond', img: 'Assets/HeroPick/balmond.png', roles: ['Fighter'] },
-    { name: 'Bane', img: 'Assets/HeroPick/bane.png', roles: ['Fighter', 'Mage'] },
-    { name: 'Barats', img: 'Assets/HeroPick/barats.png', roles: ['Fighter'] },
-    { name: 'Baxia', img: 'Assets/HeroPick/baxia.png', roles: ['Tank'] },
-    { name: 'Beatrix', img: 'Assets/HeroPick/beatrix.png', roles: ['Marksman'] },
-    { name: 'Belerick', img: 'Assets/HeroPick/belerick.png', roles: ['Tank'] },
-    { name: 'Benedetta', img: 'Assets/HeroPick/benedetta.png', roles: ['Assassin'] },
-    { name: 'Brody', img: 'Assets/HeroPick/brody.png', roles: ['Marksman'] },
-    { name: 'Bruno', img: 'Assets/HeroPick/bruno.png', roles: ['Marksman'] },
-    { name: 'Carmilla', img: 'Assets/HeroPick/carmila.png', roles: ['Support'] },
-    { name: 'Cecilion', img: 'Assets/HeroPick/cecilion.png', roles: ['Mage'] },
-    { name: "Chang'e", img: 'Assets/HeroPick/chang_e.png', roles: ['Mage'] },
-    { name: 'Chip', img: 'Assets/HeroPick/chip.png', roles: ['Support'] },
-    { name: 'Chou', img: 'Assets/HeroPick/chou.png', roles: ['Fighter'] },
-    { name: 'Cici', img: 'Assets/HeroPick/cici.png', roles: ['Fighter'] },
-    { name: 'Claude', img: 'Assets/HeroPick/claude.png', roles: ['Marksman'] },
-    { name: 'Clint', img: 'Assets/HeroPick/clint.png', roles: ['Marksman'] },
-    { name: 'Cyclops', img: 'Assets/HeroPick/cyclops.png', roles: ['Mage'] },
-    { name: 'Diggie', img: 'Assets/HeroPick/diggie.png', roles: ['Support'] },
-    { name: 'Dyrroth', img: 'Assets/HeroPick/dyroth.png', roles: ['Fighter'] },
-    { name: 'Edith', img: 'Assets/HeroPick/edith.png', roles: ['Tank'] },
-    { name: 'Esmeralda', img: 'Assets/HeroPick/esmeralda.png', roles: ['Mage', 'Support'] },
-    { name: 'Estes', img: 'Assets/HeroPick/estes.png', roles: ['Support'] },
-    { name: 'Eudora', img: 'Assets/HeroPick/eudora.png', roles: ['Mage'] },
-    { name: 'Fanny', img: 'Assets/HeroPick/fanny.png', roles: ['Assassin'] },
-    { name: 'Faramis', img: 'Assets/HeroPick/faramis.png', roles: ['Mage', 'Support'] },
-    { name: 'Floryn', img: 'Assets/HeroPick/floryn.png', roles: ['Support'] },
-    { name: 'Franco', img: 'Assets/HeroPick/franco.png', roles: ['Tank'] },
-    { name: 'Fredrinn', img: 'Assets/HeroPick/fredrin.png', roles: ['Fighter'] },
-    { name: 'Freya', img: 'Assets/HeroPick/freya.png', roles: ['Fighter'] },
-    { name: 'Gatotkaca', img: 'Assets/HeroPick/gatotkaca.png', roles: ['Tank'] },
-    { name: 'Gloo', img: 'Assets/HeroPick/gloo.png', roles: ['Tank'] },
-    { name: 'Gord', img: 'Assets/HeroPick/gord.png', roles: ['Mage'] },
-    { name: 'Granger', img: 'Assets/HeroPick/granger.png', roles: ['Marksman'] },
-    { name: 'Grock', img: 'Assets/HeroPick/grock.png', roles: ['Tank'] },
-    { name: 'Guinevere', img: 'Assets/HeroPick/guinevere.png', roles: ['Fighter'] },
-    { name: 'Gusion', img: 'Assets/HeroPick/gusion.png', roles: ['Assassin'] },
-    { name: 'Hanabi', img: 'Assets/HeroPick/hanabi.png', roles: ['Marksman'] },
-    { name: 'Hanzo', img: 'Assets/HeroPick/hanzo.png', roles: ['Assassin'] },
-    { name: 'Harith', img: 'Assets/HeroPick/harith.png', roles: ['Mage'] },
-    { name: 'Harley', img: 'Assets/HeroPick/harley.png', roles: ['Assassin', 'Mage'] },
-    { name: 'Hayabusa', img: 'Assets/HeroPick/hayabusa.png', roles: ['Assassin'] },
-    { name: 'Helcurt', img: 'Assets/HeroPick/helcurt.png', roles: ['Assassin'] },
-    { name: 'Hilda', img: 'Assets/HeroPick/hilda.png', roles: ['Fighter'] },
-    { name: 'Hirara', img: 'Assets/HeroPick/hirara.png', roles: ['Assassin'] },
-    { name: 'Hylos', img: 'Assets/HeroPick/hylos.png', roles: ['Tank'] },
-    { name: 'Irithel', img: 'Assets/HeroPick/irithel.png', roles: ['Marksman'] },
-    { name: 'Ixia', img: 'Assets/HeroPick/ixia.png', roles: ['Marksman'] },
-    { name: 'Jawhead', img: 'Assets/HeroPick/jawhead.png', roles: ['Fighter'] },
-    { name: 'Johnson', img: 'Assets/HeroPick/johnson.png', roles: ['Tank'] },
-    { name: 'Joy', img: 'Assets/HeroPick/joy.png', roles: ['Assassin'] },
-    { name: 'Julian', img: 'Assets/HeroPick/julian.png', roles: ['Assassin', 'Fighter'] },
-    { name: 'Kadita', img: 'Assets/HeroPick/kadita.png', roles: ['Assassin', 'Mage'] },
-    { name: 'Kagura', img: 'Assets/HeroPick/kagura.png', roles: ['Mage'] },
-    { name: 'Kaja', img: 'Assets/HeroPick/kaja.png', roles: ['Support'] },
-    { name: 'Kalea', img: 'Assets/HeroPick/kalea.png', roles: ['Support'] },
-    { name: 'Karina', img: 'Assets/HeroPick/karina.png', roles: ['Assassin'] },
-    { name: 'Karrie', img: 'Assets/HeroPick/karrie.png', roles: ['Marksman'] },
-    { name: 'Khaleed', img: 'Assets/HeroPick/khaleed.png', roles: ['Fighter'] },
-    { name: 'Khufra', img: 'Assets/HeroPick/khufra.png', roles: ['Tank'] },
-    { name: 'Kimmy', img: 'Assets/HeroPick/kimmy.png', roles: ['Mage', 'Marksman'] },
-    { name: 'Lancelot', img: 'Assets/HeroPick/lancelot.png', roles: ['Assassin'] },
-    { name: 'Lapu-Lapu', img: 'Assets/HeroPick/lapulapu.png', roles: ['Fighter'] },
-    { name: 'Layla', img: 'Assets/HeroPick/layla.png', roles: ['Marksman'] },
-    { name: 'Leomord', img: 'Assets/HeroPick/leomord.png', roles: ['Fighter'] },
-    { name: 'Lesley', img: 'Assets/HeroPick/lesley.png', roles: ['Marksman'] },
-    { name: 'Ling', img: 'Assets/HeroPick/ling.png', roles: ['Assassin'] },
-    { name: 'Lolita', img: 'Assets/HeroPick/lolita.png', roles: ['Tank'] },
-    { name: 'Lukas', img: 'Assets/HeroPick/lukas.png', roles: ['Fighter'] },
-    { name: 'Lunox', img: 'Assets/HeroPick/lunox.png', roles: ['Mage'] },
-    { name: 'Luo Yi', img: 'Assets/HeroPick/luoyi.png', roles: ['Mage'] },
-    { name: 'Lylia', img: 'Assets/HeroPick/lylia.png', roles: ['Mage'] },
-    { name: 'Martis', img: 'Assets/HeroPick/martis.png', roles: ['Fighter'] },
-    { name: 'Masha', img: 'Assets/HeroPick/masha.png', roles: ['Fighter'] },
-    { name: 'Mathilda', img: 'Assets/HeroPick/mathilda.png', roles: ['Support'] },
-    { name: 'Melissa', img: 'Assets/HeroPick/melissa.png', roles: ['Marksman'] },
-    { name: 'Minotaur', img: 'Assets/HeroPick/minotaur.png', roles: ['Tank'] },
-    { name: 'Minsitthar', img: 'Assets/HeroPick/minsitthar.png', roles: ['Fighter'] },
-    { name: 'Miya', img: 'Assets/HeroPick/miya.png', roles: ['Marksman'] },
-    { name: 'Moskov', img: 'Assets/HeroPick/moskov.png', roles: ['Marksman'] },
-    { name: 'Nana', img: 'Assets/HeroPick/nana.png', roles: ['Mage'] },
-    { name: 'Natalia', img: 'Assets/HeroPick/natalia.png', roles: ['Assassin'] },
-    { name: 'Natan', img: 'Assets/HeroPick/nathan.png', roles: ['Marksman'] },
-    { name: 'Nolan', img: 'Assets/HeroPick/nolan.png', roles: ['Assassin'] },
-    { name: 'Novaria', img: 'Assets/HeroPick/novaria.png', roles: ['Mage'] },
-    { name: 'Obsidia', img: 'Assets/HeroPick/obsidia.png', roles: ['Marksman'] },
-    { name: 'Odette', img: 'Assets/HeroPick/odette.png', roles: ['Mage'] },
-    { name: 'Paquito', img: 'Assets/HeroPick/paquito.png', roles: ['Assassin', 'Fighter'] },
-    { name: 'Pharsa', img: 'Assets/HeroPick/pharsa.png', roles: ['Mage'] },
-    { name: 'Phoveus', img: 'Assets/HeroPick/phoveus.png', roles: ['Fighter'] },
-    { name: 'Popol and Kupa', img: 'Assets/HeroPick/popolandkupa.png', roles: ['Marksman'] },
-    { name: 'Rafaela', img: 'Assets/HeroPick/rafaela.png', roles: ['Support'] },
-    { name: 'Roger', img: 'Assets/HeroPick/roger.png', roles: ['Fighter'] },
-    { name: 'Ruby', img: 'Assets/HeroPick/ruby.png', roles: ['Fighter'] },
-    { name: 'Saber', img: 'Assets/HeroPick/saber.png', roles: ['Assassin'] },
-    { name: 'Selena', img: 'Assets/HeroPick/selena.png', roles: ['Assassin', 'Support'] },
-    { name: 'Silvanna', img: 'Assets/HeroPick/silvanna.png', roles: ['Fighter'] },
-    { name: 'Sun', img: 'Assets/HeroPick/sun.png', roles: ['Fighter'] },
-    { name: 'Suyou', img: 'Assets/HeroPick/suyou.png', roles: ['Assassin'] },
-    { name: 'Terizla', img: 'Assets/HeroPick/terizla.png', roles: ['Fighter'] },
-    { name: 'Thamuz', img: 'Assets/HeroPick/thamuz.png', roles: ['Fighter'] },
-    { name: 'Tigreal', img: 'Assets/HeroPick/tigreal.png', roles: ['Tank'] },
-    { name: 'Uranus', img: 'Assets/HeroPick/uranus.png', roles: ['Tank'] },
-    { name: 'Vale', img: 'Assets/HeroPick/vale.png', roles: ['Mage'] },
-    { name: 'Valentina', img: 'Assets/HeroPick/valentina.png', roles: ['Mage'] },
-    { name: 'Valir', img: 'Assets/HeroPick/valir.png', roles: ['Mage'] },
-    { name: 'Vexana', img: 'Assets/HeroPick/vexana.png', roles: ['Mage'] },
-    { name: 'Wanwan', img: 'Assets/HeroPick/wanwan.png', roles: ['Marksman'] },
-    { name: 'X.Borg', img: 'Assets/HeroPick/xborg.png', roles: ['Fighter'] },
-    { name: 'Xavier', img: 'Assets/HeroPick/xavier.png', roles: ['Mage'] },
-    { name: 'Yi Sun-shin', img: 'Assets/HeroPick/yisunshin.png', roles: ['Assassin'] },
-    { name: 'Yin', img: 'Assets/HeroPick/yin.png', roles: ['Assassin', 'Fighter'] },
-    { name: 'Yu Zhong', img: 'Assets/HeroPick/yuzhong.png', roles: ['Fighter'] },
-    { name: 'Yve', img: 'Assets/HeroPick/yve.png', roles: ['Mage'] },
-    { name: 'Zetian', img: 'Assets/HeroPick/zetian.png', roles: ['Mage'] },
-    { name: 'Zhask', img: 'Assets/HeroPick/zhask.png', roles: ['Mage', 'Support'] },
-    { name: 'Zhuxin', img: 'Assets/HeroPick/zhuxin.png', roles: ['Mage'] },
-    { name: 'Zilong', img: 'Assets/HeroPick/zilong.png', roles: ['Assassin', 'Fighter'] },
+    { name: 'Aamon', img: 'Assets/HeroPick/aamon.png', video: 'Assets/Heroes/aamon.mp4', roles: ['Assassin'] },
+    { name: 'Akai', img: 'Assets/HeroPick/akai.png', video: 'Assets/Heroes/akai.mp4', roles: ['Tank'] },
+    { name: 'Aldous', img: 'Assets/HeroPick/aldous.png', video: 'Assets/Heroes/aldous.mp4', roles: ['Fighter'] },
+    { name: 'Alice', img: 'Assets/HeroPick/alice.png', video: 'Assets/Heroes/alice.mp4', roles: ['Mage'] },
+    { name: 'Alpha', img: 'Assets/HeroPick/alpha.png', video: 'Assets/Heroes/alpha.mp4', roles: ['Fighter'] },
+    { name: 'Alucard', img: 'Assets/HeroPick/alucard.png', video: 'Assets/Heroes/alucard.mp4', roles: ['Assassin'] },
+    { name: 'Angela', img: 'Assets/HeroPick/angela.png', video: 'Assets/Heroes/angela.mp4', roles: ['Support'] },
+    { name: 'Argus', img: 'Assets/HeroPick/argus.png', video: 'Assets/Heroes/argus.mp4', roles: ['Fighter'] },
+    { name: 'Arlott', img: 'Assets/HeroPick/arlott.png', video: 'Assets/Heroes/arlott.mp4', roles: ['Assassin', 'Fighter'] },
+    { name: 'Atlas', img: 'Assets/HeroPick/atlas.png', video: 'Assets/Heroes/atlas.mp4', roles: ['Tank'] },
+    { name: 'Aulus', img: 'Assets/HeroPick/aulus.png', video: 'Assets/Heroes/aulus.mp4', roles: ['Fighter'] },
+    { name: 'Aurora', img: 'Assets/HeroPick/aurora.png', video: 'Assets/Heroes/aurora.mp4', roles: ['Mage'] },
+    { name: 'Badang', img: 'Assets/HeroPick/badang.png', video: 'Assets/Heroes/badang.mp4', roles: ['Fighter'] },
+    { name: 'Balmond', img: 'Assets/HeroPick/balmond.png', video: 'Assets/Heroes/balmond.mp4', roles: ['Fighter'] },
+    { name: 'Bane', img: 'Assets/HeroPick/bane.png', video: 'Assets/Heroes/bane.mp4', roles: ['Fighter', 'Mage'] },
+    { name: 'Barats', img: 'Assets/HeroPick/barats.png', video: 'Assets/Heroes/barats.mp4', roles: ['Tank', 'Fighter'] },
+    { name: 'Baxia', img: 'Assets/HeroPick/baxia.png', video: 'Assets/Heroes/baxia.mp4', roles: ['Tank'] },
+    { name: 'Beatrix', img: 'Assets/HeroPick/beatrix.png', video: 'Assets/Heroes/beatrix.mp4', roles: ['Marksman'] },
+    { name: 'Belerick', img: 'Assets/HeroPick/belerick.png', video: 'Assets/Heroes/belerick.mp4', roles: ['Tank'] },
+    { name: 'Benedetta', img: 'Assets/HeroPick/benedetta.png', video: 'Assets/Heroes/benedetta.mp4', roles: ['Assassin'] },
+    { name: 'Brody', img: 'Assets/HeroPick/brody.png', video: 'Assets/Heroes/brody.mp4', roles: ['Marksman'] },
+    { name: 'Bruno', img: 'Assets/HeroPick/bruno.png', video: 'Assets/Heroes/bruno.mp4', roles: ['Marksman'] },
+    { name: 'Carmilla', img: 'Assets/HeroPick/carmila.png', video: 'Assets/Heroes/carmila.mp4', roles: ['Support'] },
+    { name: 'Cecilion', img: 'Assets/HeroPick/cecilion.png', video: 'Assets/Heroes/cecilion.mp4', roles: ['Mage'] },
+    { name: "Chang'e", img: 'Assets/HeroPick/chang_e.png', video: 'Assets/Heroes/chang_e.mp4', roles: ['Mage'] },
+    { name: 'Chip', img: 'Assets/HeroPick/chip.png', video: 'Assets/Heroes/chip.mp4', roles: ['Support'] },
+    { name: 'Chou', img: 'Assets/HeroPick/chou.png', video: 'Assets/Heroes/chou.mp4', roles: ['Fighter'] },
+    { name: 'Cici', img: 'Assets/HeroPick/cici.png', video: 'Assets/Heroes/cici.mp4', roles: ['Fighter'] },
+    { name: 'Claude', img: 'Assets/HeroPick/claude.png', video: 'Assets/Heroes/claude.mp4', roles: ['Marksman'] },
+    { name: 'Clint', img: 'Assets/HeroPick/clint.png', video: 'Assets/Heroes/clint.mp4', roles: ['Marksman'] },
+    { name: 'Cyclops', img: 'Assets/HeroPick/cyclops.png', video: 'Assets/Heroes/cyclops.mp4', roles: ['Mage'] },
+    { name: 'Diggie', img: 'Assets/HeroPick/diggie.png', video: 'Assets/Heroes/diggie.mp4', roles: ['Support'] },
+    { name: 'Dyrroth', img: 'Assets/HeroPick/dyroth.png', video: 'Assets/Heroes/dyroth.mp4', roles: ['Fighter'] },
+    { name: 'Edith', img: 'Assets/HeroPick/edith.png', video: 'Assets/Heroes/edith.mp4', roles: ['Tank'] },
+    { name: 'Esmeralda', img: 'Assets/HeroPick/esmeralda.png', video: 'Assets/Heroes/esmeralda.mp4', roles: ['Mage', 'Support'] },
+    { name: 'Estes', img: 'Assets/HeroPick/estes.png', video: 'Assets/Heroes/estes.mp4', roles: ['Support'] },
+    { name: 'Eudora', img: 'Assets/HeroPick/eudora.png', video: 'Assets/Heroes/eudora.mp4', roles: ['Mage'] },
+    { name: 'Fanny', img: 'Assets/HeroPick/fanny.png', video: 'Assets/Heroes/fanny.mp4', roles: ['Assassin'] },
+    { name: 'Faramis', img: 'Assets/HeroPick/faramis.png', video: 'Assets/Heroes/faramis.mp4', roles: ['Mage', 'Support'] },
+    { name: 'Floryn', img: 'Assets/HeroPick/floryn.png', video: 'Assets/Heroes/floryn.mp4', roles: ['Support'] },
+    { name: 'Franco', img: 'Assets/HeroPick/franco.png', video: 'Assets/Heroes/franco.mp4', roles: ['Tank'] },
+    { name: 'Fredrinn', img: 'Assets/HeroPick/fredrin.png', video: 'Assets/Heroes/fredrinn.mp4', roles: ['Tank', 'Fighter'] },
+    { name: 'Freya', img: 'Assets/HeroPick/freya.png', video: 'Assets/Heroes/freya.mp4', roles: ['Fighter'] },
+    { name: 'Gatotkaca', img: 'Assets/HeroPick/gatotkaca.png', video: 'Assets/Heroes/gatotkaca.mp4', roles: ['Tank'] },
+    { name: 'Gloo', img: 'Assets/HeroPick/gloo.png', video: 'Assets/Heroes/gloo.mp4', roles: ['Tank'] },
+    { name: 'Gord', img: 'Assets/HeroPick/gord.png', video: 'Assets/Heroes/gord.mp4', roles: ['Mage'] },
+    { name: 'Granger', img: 'Assets/HeroPick/granger.png', video: 'Assets/Heroes/granger.mp4', roles: ['Marksman'] },
+    { name: 'Grock', img: 'Assets/HeroPick/grock.png', video: 'Assets/Heroes/grock.mp4', roles: ['Tank'] },
+    { name: 'Guinevere', img: 'Assets/HeroPick/guinevere.png', video: 'Assets/Heroes/guinevere.mp4', roles: ['Fighter'] },
+    { name: 'Gusion', img: 'Assets/HeroPick/gusion.png', video: 'Assets/Heroes/gusion.mp4', roles: ['Assassin'] },
+    { name: 'Hanabi', img: 'Assets/HeroPick/hanabi.png', video: 'Assets/Heroes/hanabi.mp4', roles: ['Marksman'] },
+    { name: 'Hanzo', img: 'Assets/HeroPick/hanzo.png', video: 'Assets/Heroes/hanzo.mp4', roles: ['Assassin'] },
+    { name: 'Harith', img: 'Assets/HeroPick/harith.png', video: 'Assets/Heroes/harith.mp4', roles: ['Mage'] },
+    { name: 'Harley', img: 'Assets/HeroPick/harley.png', video: 'Assets/Heroes/harley.mp4', roles: ['Assassin', 'Mage'] },
+    { name: 'Hayabusa', img: 'Assets/HeroPick/hayabusa.png', video: 'Assets/Heroes/hayabusa.mp4', roles: ['Assassin'] },
+    { name: 'Helcurt', img: 'Assets/HeroPick/helcurt.png', video: 'Assets/Heroes/helcurt.mp4', roles: ['Assassin'] },
+    { name: 'Hilda', img: 'Assets/HeroPick/hilda.png', video: 'Assets/Heroes/hilda.mp4', roles: ['Fighter'] },
+    { name: 'Hirara', img: 'Assets/HeroPick/hirara.png', video: 'Assets/Heroes/hirara.mp4', roles: ['Assassin'] },
+    { name: 'Hylos', img: 'Assets/HeroPick/hylos.png', video: 'Assets/Heroes/hylos.mp4', roles: ['Tank'] },
+    { name: 'Irithel', img: 'Assets/HeroPick/irithel.png', video: 'Assets/Heroes/irithel.mp4', roles: ['Marksman'] },
+    { name: 'Ixia', img: 'Assets/HeroPick/ixia.png', video: 'Assets/Heroes/ixia.mp4', roles: ['Marksman'] },
+    { name: 'Jawhead', img: 'Assets/HeroPick/jawhead.png', video: 'Assets/Heroes/jawhead.mp4', roles: ['Fighter'] },
+    { name: 'Johnson', img: 'Assets/HeroPick/johnson.png', video: 'Assets/Heroes/johnson.mp4', roles: ['Tank'] },
+    { name: 'Joy', img: 'Assets/HeroPick/joy.png', video: 'Assets/Heroes/joy.mp4', roles: ['Assassin'] },
+    { name: 'Julian', img: 'Assets/HeroPick/julian.png', video: 'Assets/Heroes/julian.mp4', roles: ['Assassin', 'Fighter'] },
+    { name: 'Kadita', img: 'Assets/HeroPick/kadita.png', video: 'Assets/Heroes/kadita.mp4', roles: ['Assassin', 'Mage'] },
+    { name: 'Kagura', img: 'Assets/HeroPick/kagura.png', video: 'Assets/Heroes/kagura.mp4', roles: ['Mage'] },
+    { name: 'Kaja', img: 'Assets/HeroPick/kaja.png', video: 'Assets/Heroes/kaja.mp4', roles: ['Support'] },
+    { name: 'Kalea', img: 'Assets/HeroPick/kalea.png', video: 'Assets/Heroes/kalea.mp4', roles: ['Support'] },
+    { name: 'Karina', img: 'Assets/HeroPick/karina.png', video: 'Assets/Heroes/karina.mp4', roles: ['Assassin'] },
+    { name: 'Karrie', img: 'Assets/HeroPick/karrie.png', video: 'Assets/Heroes/karrie.mp4', roles: ['Marksman'] },
+    { name: 'Khaleed', img: 'Assets/HeroPick/khaleed.png', video: 'Assets/Heroes/khaleed.mp4', roles: ['Fighter'] },
+    { name: 'Khufra', img: 'Assets/HeroPick/khufra.png', video: 'Assets/Heroes/khufra.mp4', roles: ['Tank'] },
+    { name: 'Kimmy', img: 'Assets/HeroPick/kimmy.png', video: 'Assets/Heroes/kimmy.mp4', roles: ['Mage', 'Marksman'] },
+    { name: 'Lancelot', img: 'Assets/HeroPick/lancelot.png', video: 'Assets/Heroes/lancelot.mp4', roles: ['Assassin'] },
+    { name: 'Lapu-Lapu', img: 'Assets/HeroPick/lapulapu.png', video: 'Assets/Heroes/lapulapu.mp4', roles: ['Fighter'] },
+    { name: 'Layla', img: 'Assets/HeroPick/layla.png', video: 'Assets/Heroes/layla.mp4', roles: ['Marksman'] },
+    { name: 'Leomord', img: 'Assets/HeroPick/leomord.png', video: 'Assets/Heroes/leomord.mp4', roles: ['Fighter'] },
+    { name: 'Lesley', img: 'Assets/HeroPick/lesley.png', video: 'Assets/Heroes/lesley.mp4', roles: ['Marksman'] },
+    { name: 'Ling', img: 'Assets/HeroPick/ling.png', video: 'Assets/Heroes/ling.mp4', roles: ['Assassin'] },
+    { name: 'Lolita', img: 'Assets/HeroPick/lolita.png', video: 'Assets/Heroes/lolita.mp4', roles: ['Tank'] },
+    { name: 'Lukas', img: 'Assets/HeroPick/lukas.png', video: 'Assets/Heroes/lukas.mp4', roles: ['Fighter'] },
+    { name: 'Lunox', img: 'Assets/HeroPick/lunox.png', video: 'Assets/Heroes/lunox.mp4', roles: ['Mage'] },
+    { name: 'Luo Yi', img: 'Assets/HeroPick/luoyi.png', video: 'Assets/Heroes/luoyi.mp4', roles: ['Mage'] },
+    { name: 'Lylia', img: 'Assets/HeroPick/lylia.png', video: 'Assets/Heroes/lylia.mp4', roles: ['Mage'] },
+    { name: 'Marcel', img: 'Assets/HeroPick/marcel.png', video: 'Assets/Heroes/marcel.mp4', roles: ['Support'] },
+    { name: 'Martis', img: 'Assets/HeroPick/martis.png', video: 'Assets/Heroes/martis.mp4', roles: ['Fighter'] },
+    { name: 'Masha', img: 'Assets/HeroPick/masha.png', video: 'Assets/Heroes/masha.mp4', roles: ['Fighter'] },
+    { name: 'Mathilda', img: 'Assets/HeroPick/mathilda.png', video: 'Assets/Heroes/mathilda.mp4', roles: ['Support'] },
+    { name: 'Melissa', img: 'Assets/HeroPick/melissa.png', video: 'Assets/Heroes/melissa.mp4', roles: ['Marksman'] },
+    { name: 'Minotaur', img: 'Assets/HeroPick/minotaur.png', video: 'Assets/Heroes/minotaur.mp4', roles: ['Tank'] },
+    { name: 'Minsitthar', img: 'Assets/HeroPick/minsitthar.png', video: 'Assets/Heroes/minsitthar.mp4', roles: ['Fighter'] },
+    { name: 'Miya', img: 'Assets/HeroPick/miya.png', video: 'Assets/Heroes/miya.mp4', roles: ['Marksman'] },
+    { name: 'Moskov', img: 'Assets/HeroPick/moskov.png', video: 'Assets/Heroes/moskov.mp4', roles: ['Marksman'] },
+    { name: 'Nana', img: 'Assets/HeroPick/nana.png', video: 'Assets/Heroes/nana.mp4', roles: ['Mage'] },
+    { name: 'Natalia', img: 'Assets/HeroPick/natalia.png', video: 'Assets/Heroes/natalia.mp4', roles: ['Assassin'] },
+    { name: 'Natan', img: 'Assets/HeroPick/nathan.png', video: 'Assets/Heroes/natan.mp4', roles: ['Marksman'] },
+    { name: 'Nolan', img: 'Assets/HeroPick/nolan.png', video: 'Assets/Heroes/nolan.mp4', roles: ['Assassin'] },
+    { name: 'Novaria', img: 'Assets/HeroPick/novaria.png', video: 'Assets/Heroes/novaria.mp4', roles: ['Mage'] },
+    { name: 'Obsidia', img: 'Assets/HeroPick/obsidia.png', video: 'Assets/Heroes/obsidia.mp4', roles: ['Marksman'] },
+    { name: 'Odette', img: 'Assets/HeroPick/odette.png', video: 'Assets/Heroes/odette.mp4', roles: ['Mage'] },
+    { name: 'Paquito', img: 'Assets/HeroPick/paquito.png', video: 'Assets/Heroes/paquito.mp4', roles: ['Assassin', 'Fighter'] },
+    { name: 'Pharsa', img: 'Assets/HeroPick/pharsa.png', video: 'Assets/Heroes/pharsa.mp4', roles: ['Mage'] },
+    { name: 'Phoveus', img: 'Assets/HeroPick/phoveus.png', video: 'Assets/Heroes/phoveus.mp4', roles: ['Fighter'] },
+    { name: 'Popol and Kupa', img: 'Assets/HeroPick/popolandkupa.png', video: 'Assets/Heroes/popolandkupa.mp4', roles: ['Marksman'] },
+    { name: 'Rafaela', img: 'Assets/HeroPick/rafaela.png', video: 'Assets/Heroes/rafaela.mp4', roles: ['Support'] },
+    { name: 'Roger', img: 'Assets/HeroPick/roger.png', video: 'Assets/Heroes/roger.mp4', roles: ['Fighter'] },
+    { name: 'Ruby', img: 'Assets/HeroPick/ruby.png', video: 'Assets/Heroes/ruby.mp4', roles: ['Fighter'] },
+    { name: 'Saber', img: 'Assets/HeroPick/saber.png', video: 'Assets/Heroes/saber.mp4', roles: ['Assassin'] },
+    { name: 'Selena', img: 'Assets/HeroPick/selena.png', video: 'Assets/Heroes/selena.mp4', roles: ['Assassin', 'Support'] },
+    { name: 'Sora', img: 'Assets/HeroPick/sora.png', video: 'Assets/Heroes/sora.mp4', roles: ['Fighter'] },
+    { name: 'Silvanna', img: 'Assets/HeroPick/silvanna.png', video: 'Assets/Heroes/silvanna.mp4', roles: ['Fighter'] },
+    { name: 'Sun', img: 'Assets/HeroPick/sun.png', video: 'Assets/Heroes/sun.mp4', roles: ['Fighter'] },
+    { name: 'Suyou', img: 'Assets/HeroPick/suyou.png', video: 'Assets/Heroes/suyou.mp4', roles: ['Assassin', 'Fighter'] },
+    { name: 'Terizla', img: 'Assets/HeroPick/terizla.png', video: 'Assets/Heroes/terizla.mp4', roles: ['Fighter'] },
+    { name: 'Thamuz', img: 'Assets/HeroPick/thamuz.png', video: 'Assets/Heroes/thamuz.mp4', roles: ['Fighter'] },
+    { name: 'Tigreal', img: 'Assets/HeroPick/tigreal.png', video: 'Assets/Heroes/tigreal.mp4', roles: ['Tank'] },
+    { name: 'Uranus', img: 'Assets/HeroPick/uranus.png', video: 'Assets/Heroes/uranus.mp4', roles: ['Tank'] },
+    { name: 'Vale', img: 'Assets/HeroPick/vale.png', video: 'Assets/Heroes/vale.mp4', roles: ['Mage'] },
+    { name: 'Valentina', img: 'Assets/HeroPick/valentina.png', video: 'Assets/Heroes/valentina.mp4', roles: ['Mage'] },
+    { name: 'Valir', img: 'Assets/HeroPick/valir.png', video: 'Assets/Heroes/valir.mp4', roles: ['Mage'] },
+    { name: 'Vexana', img: 'Assets/HeroPick/vexana.png', video: 'Assets/Heroes/vexana.mp4', roles: ['Mage'] },
+    { name: 'Wanwan', img: 'Assets/HeroPick/wanwan.png', video: 'Assets/Heroes/wanwan.mp4', roles: ['Marksman'] },
+    { name: 'X.Borg', img: 'Assets/HeroPick/xborg.png', video: 'Assets/Heroes/xborg.mp4', roles: ['Fighter'] },
+    { name: 'Xavier', img: 'Assets/HeroPick/xavier.png', video: 'Assets/Heroes/xavier.mp4', roles: ['Mage'] },
+    { name: 'Yi Sun-shin', img: 'Assets/HeroPick/yisunshin.png', video: 'Assets/Heroes/yisunshin.mp4', roles: ['Assassin'] },
+    { name: 'Yin', img: 'Assets/HeroPick/yin.png', video: 'Assets/Heroes/yin.mp4', roles: ['Assassin', 'Fighter'] },
+    { name: 'Yu Zhong', img: 'Assets/HeroPick/yuzhong.png', video: 'Assets/Heroes/yuzhong.mp4', roles: ['Fighter'] },
+    { name: 'Yve', img: 'Assets/HeroPick/yve.png', video: 'Assets/Heroes/yve.mp4', roles: ['Mage'] },
+    { name: 'Zetian', img: 'Assets/HeroPick/zetian.png', video: 'Assets/Heroes/zetian.mp4', roles: ['Mage'] },
+    { name: 'Zhask', img: 'Assets/HeroPick/zhask.png', video: 'Assets/Heroes/zhask.mp4', roles: ['Mage', 'Support'] },
+    { name: 'Zhuxin', img: 'Assets/HeroPick/zhuxin.png', video: 'Assets/Heroes/zhuxin.mp4', roles: ['Mage'] },
+    { name: 'Zilong', img: 'Assets/HeroPick/zilong.png', video: 'Assets/Heroes/zilong.mp4', roles: ['Assassin', 'Fighter'] },
 ];
 
 
@@ -179,31 +181,23 @@ function chooseHero(hero) {
     document.getElementById('active-slot-label').textContent = '';
     activeSlot = null;
 }
-
-// Menampilkan gambar hero yang dipilih dengan animasi saat berubah
 function selectHero(hero, id) {
     const imageDisplay = document.getElementById(`image-display-${id}`);
-    const existingImage = imageDisplay.querySelector('img');
+    const existingImage = imageDisplay.querySelector('img, video');
 
     if (existingImage) {
-        // Jika ada gambar yang sudah ada, tambahkan animasi fly-out
         existingImage.classList.add('fly-out');
-        // Ganti gambar setelah animasi fly-out selesai (0.5 detik)
         setTimeout(() => {
             updateHeroImage(hero, id);
         }, 500);
     } else {
-        // Jika belum ada gambar, langsung tampilkan gambar baru
         updateHeroImage(hero, id);
     }
 }
 
-// Fungsi untuk memuat foto satu tim sekaligus dari folder (5 slot per tim)
-// Nama pemain otomatis diisi dari nama file gambar (tanpa ekstensi)
 function loadTeamPhotos(event, team) {
     const files = Array.from(event.target.files).filter(f => f.type.startsWith('image/'));
 
-    // Urutkan berdasarkan nama file (numeric-aware) agar 1,2,...,10 tersusun benar
     files.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
 
     const startIndex = team === 'blue' ? 1 : 6;
@@ -248,35 +242,36 @@ function resetPlayerPhotos() {
 // Fungsi untuk meng-update gambar hero dengan animasi fly-in
 function updateHeroImage(hero, id) {
     const imageDisplay = document.getElementById(`image-display-${id}`);
-    const isPick = (id >= 1 && id <= 5) || (id >= 11 && id <= 15);   // skip ban slots (6-10, 16-20)
+    const isPick = (id >= 1 && id <= 5) || (id >= 11 && id <= 15);
     const side = id <= 10 ? 'blue' : 'red';
 
     const nameTag = isPick
         ? `<div class="hero-name-tag hero-name-${side} fly-in">${hero.name}</div>`
         : '';
 
-    imageDisplay.innerHTML = `<img src="${hero.img}" alt="${hero.name}" class="fly-in">${nameTag}`;
+    const media = (hero.video && isPick)
+    ? `<video src="${hero.video}" class="fly-in" autoplay loop muted playsinline></video>`
+    : `<img src="${hero.img}" alt="${hero.name}" class="fly-in">`;
+
+    imageDisplay.innerHTML = `${media}${nameTag}`;
 
     const slotBtn = document.getElementById(`search-${id}`);
     if (slotBtn) slotBtn.textContent = `${slotBtn.dataset.label}: ${hero.name}`;
 }
 
-// Reset semua dropdown dan input dengan animasi fly-out
 function resetAllDropdowns() {
     for (let i = 1; i <= 20; i++) {
         const imageDisplay = document.getElementById(`image-display-${i}`);
         if (imageDisplay.innerHTML) {
-            // Tambahkan kelas animasi fly-out
-            imageDisplay.querySelector('img').classList.add('fly-out');
+            const existingMedia = imageDisplay.querySelector('img, video');
+            if (existingMedia) existingMedia.classList.add('fly-out');
         }
 
-
-        // Hapus nilai input dan dropdown setelah animasi selesai
         setTimeout(() => {
             const slotBtn = document.getElementById(`search-${i}`);
             if (slotBtn) slotBtn.textContent = slotBtn.dataset.label;
             imageDisplay.innerHTML = '';
-        }, 500); // Delay sesuai dengan durasi animasi (0.5 detik)
+        }, 500);
     }
 }
 
